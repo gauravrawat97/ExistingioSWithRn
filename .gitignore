@@ -29,6 +29,18 @@ build/
 local.properties
 *.iml
 *.hprof
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/app/build
+*.log
+/.navigation
+src/main/res/drawable/
+*.hprof
+*.apk
 
 # node.js
 #
@@ -67,7 +79,6 @@ package-lock.json
 # iOS
 
 # android
-android/
 
 # Xcode
 .DS_Store
