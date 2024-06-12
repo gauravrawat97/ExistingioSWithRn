@@ -7,20 +7,13 @@ import {
   View,
 } from "react-native";
 
-const RNHighScores = ({ scores }) => {
-  const contents = scores.map((score) => (
-    <Text key={score.name}>
-      {score.name}:{score.value}
-      {"\n"}
-    </Text>
-  ));
+const RNHighScores = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
         <Text>Back To Native</Text>
       </TouchableOpacity>
       <Text style={styles.highScoresTitle}>2048 High Scores!</Text>
-      <Text style={styles.scores}>{contents}</Text>
     </View>
   );
 };
