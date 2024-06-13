@@ -30,34 +30,9 @@ class ViewController: UIViewController {
 //        Go to Editor > Embed In > Navigation Controller.
 //)
         let reactNativeVC = ReactNativeViewController()
-        reactNativeVC.updateProps(["scores":
-                                    [
-                                        ["name":"Gaurav", "value":"22"],
-                                        ["name":"Rawat", "value":"22"]
-                                    ]
-                                ])
+        reactNativeVC.updateProps(["initialProps": ["action": "second button","platform": "ios"]])
         self.navigationController?.pushViewController(reactNativeVC, animated: true)
 
-//             self.present(reactNativeVC, animated: true, completion: nil) // use this if you don't want to navigate to that screen
-//
-//      let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
-//      let mockData:NSDictionary = ["scores":
-//          [
-//              ["name":"Alex", "value":"42"],
-//              ["name":"Joel", "value":"10"]
-//          ]
-//      ]
-//
-//      let rootView = RCTRootView(
-//          bundleURL: jsCodeLocation,
-//          moduleName: "RNHighScores",
-//          initialProperties: mockData as [NSObject : AnyObject],
-//          launchOptions: nil
-//      )
-//      let vc = UIViewController()
-//      vc.view = rootView
-//        vc.modalPresentationStyle = .fullScreen
-//      self.present(vc, animated: true, completion: nil)
     }
 }
 

@@ -5,26 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
 
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+           android:gravity="center"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnRn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Go To React Native"
+
+                android:text="Go To React Native Btn 1"
                 android:textSize="22dp" />
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/btnRn2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Go To RN Btn 2 "
+                android:textSize="22dp"
+
+                />
+
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,13 +7,14 @@ import {
   View,
 } from "react-native";
 
-const RNHighScores = () => {
+const RNHighScores = (props) => {
+  const { action, platform } = props?.initialProps;
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <Text>Back To Native</Text>
-      </TouchableOpacity>
-      <Text style={styles.highScoresTitle}>2048 High Scores!</Text>
+      <Text style={styles.highScoresTitle}>Welcome to React Native Screen</Text>
+      <Text style={styles.highScoresTitle}>
+        You pressed {action} on {platform}
+      </Text>
     </View>
   );
 };

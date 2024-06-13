@@ -8,33 +8,19 @@ import UIKit
 import React
 
 class ReactNativeViewController: UIViewController {
-          var mockData:NSDictionary = ["scores":
-              [
-                  ["name":"Alex", "value":"42"],
-                  ["name":"Joel", "value":"10"]
-              ]
-          ]
 
+        var initialProps: NSDictionary =  ["initialProps": ["action": "button","platform": "ios"]]
+
+    
     func updateProps(_ name: NSDictionary){
-        self.mockData = name
+        self.initialProps = name
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         let jsCodeLocation: URL
-    #if DEBUG
-print("hii debug")
-//      jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index", fallbackResource: nil)
-
-              #else
-        print("hii release")
-
-//        jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
-              #endif
-        
-        
         jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
 
-              let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "RNHighScores", initialProperties: mockData as [NSObject : AnyObject], launchOptions: nil)
+        let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "RNHighScores", initialProperties: initialProps as! [AnyHashable : Any], launchOptions: nil)
         rootView.frame = self.view.bounds
         self.view.addSubview(rootView)
     }

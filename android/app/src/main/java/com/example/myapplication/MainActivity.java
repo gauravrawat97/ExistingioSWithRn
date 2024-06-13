@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -25,10 +26,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-          Button button = findViewById(R.id.btnRn);
-        button.setOnClickListener(view -> {
-        startActivity(new Intent(MainActivity.this, MyReactActivity.class));
-        });
+        Button button = findViewById(R.id.btnRn);
+       Button button2 = findViewById(R.id.btnRn2);
 
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, MyReactActivity.class);
+
+            Bundle intials = new Bundle();
+
+            intials.putString("action", "button one");
+            intials.putString("platform", "android");
+            intent.putExtra("initialProps",intials);
+        startActivity(intent);
+        });
+        button2.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, MyReactActivity.class);
+
+            Bundle intials = new Bundle();
+
+            intials.putString("action", "button two");
+            intials.putString("platform", "android");
+            intent.putExtra("initialProps",intials);
+            startActivity(intent);
+        });
     }
 }

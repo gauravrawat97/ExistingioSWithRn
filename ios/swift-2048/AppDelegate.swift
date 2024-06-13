@@ -15,26 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//      let jsCodeLocation: URL
-//
-//              #if DEBUG
-//      
-//      jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index", fallbackResource: nil)
-//
-//              #else
-//      
-//      jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index") {
-//          return nil
-//      }
-//              #endif
-//
-//              let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "RNHighScores", initialProperties: nil, launchOptions: launchOptions)
-//              let rootViewController = UIViewController()
-//              rootViewController.view = rootView
-//
-//              self.window = UIWindow(frame: UIScreen.main.bounds)
-//              self.window?.rootViewController = rootViewController
-//              self.window?.makeKeyAndVisible()
+//use this if you directly want to open the rn on start
 
 return true
 
